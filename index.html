@@ -1,8 +1,26 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Scoreboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoreboard PWA</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the Scoreboard</h1>
+    <header>
+        <h1>Scoreboard</h1>
+    </header>
+    <main>
+        <form id="score-form">
+            <input type="text" id="team1" placeholder="Team 1">
+            <input type="number" id="score1" placeholder="Score 1">
+            <input type="text" id="team2" placeholder="Team 2">
+            <input type="number" id="score2" placeholder="Score 2">
+            <button type="submit">Submit</button>
+        </form>
+        <ul id="score-list"></ul>
+    </main>
+    <script src="app.js"></script>
 </body>
 </html>
