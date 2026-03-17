@@ -3,24 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scoreboard PWA</title>
     <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="theme-color" content="#ffffff">
+    <title>Scoreboard PWA</title>
+    <style>
+        /* Add your CSS styles here */
+    </style>
+    <script>
+        // Service worker registration for PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js').then(() => {
+                console.log('Service Worker registered');
+            });
+        }
+    </script>
 </head>
 <body>
     <header>
-        <h1>Scoreboard</h1>
+        <h1>Card Game Scoreboard</h1>
     </header>
-    <main>
-        <form id="score-form">
-            <input type="text" id="team1" placeholder="Team 1">
-            <input type="number" id="score1" placeholder="Score 1">
-            <input type="text" id="team2" placeholder="Team 2">
-            <input type="number" id="score2" placeholder="Score 2">
-            <button type="submit">Submit</button>
-        </form>
-        <ul id="score-list"></ul>
-    </main>
-    <script src="app.js"></script>
+    <section id="player-profiles">
+        <h2>Player Profiles</h2>
+        <!-- Player profiles content -->
+    </section>
+    <section id="game-setup">
+        <h2>Game Setup</h2>
+        <!-- Game setup content -->
+    </section>
+    <section id="gameplay">
+        <h2>Gameplay</h2>
+        <!-- Gameplay content -->
+    </section>
+    <section id="history">
+        <h2>Game History</h2>
+        <!-- Game history content -->
+    </section>
+    <section id="rules">
+        <h2>Rules</h2>
+        <!-- Game rules content -->
+    </section>
 </body>
 </html>
